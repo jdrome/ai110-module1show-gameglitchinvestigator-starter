@@ -26,20 +26,26 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+  - [ ] This is basically a number guessing game (like binary search).
 - [ ] Detail which bugs you found.
+  - [ ] The ranges for the difficulties was wrong.
 - [ ] Explain what fixes you applied.
+  - [ ] The ranges for the difficulties was fixed (easy is 1-20, normal is 1-50, hard is 1-100).
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User opens page
+2. User choses difficulty (easy)
+3. Game says "Guess a number between 1 and 20
+4. Answer is 13
+5. User guesses 15
+6. Game says "go lower"
+7. User guesses 13
+8. Game says "Correct!"
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+**Screenshot** *(optional)*: ![alt text](image.png)
 
 ## 🧪 Test Results
 
@@ -47,6 +53,14 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # Paste your pytest output here, e.g.:
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
+
+
+test/test_game_logic.py::test_range_matches_difficulty[Easy-expected0] PASSED                                                                                                  [ 16%]
+test/test_game_logic.py::test_range_matches_difficulty[Normal-expected1] PASSED                                                                                                [ 33%]
+test/test_game_logic.py::test_range_matches_difficulty[Hard-expected2] PASSED                                                                                                  [ 50%]
+test/test_game_logic.py::test_normal_and_hard_not_swapped PASSED                                                                                                               [ 66%]
+test/test_game_logic.py::test_upper_bounds_increase_with_difficulty PASSED                                                                                                     [ 83%]
+test/test_game_logic.py::test_all_ranges_start_at_one PASSED  
 ```
 
 ## 🚀 Stretch Features
