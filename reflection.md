@@ -5,18 +5,21 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  - Choosing the right answer yielded a congratulations message
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  1. In hard mode, the range is listed as being from 1-50, but it should be from 1-100
+  2. All difficulties are the same difficulty (ranging from 1-100).
 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input | Expected Behavior       | Actual Behavior       | Console Output / Error |
+|-------|-------------------------|-----------------------|------------------------|
+| No Input | New Game starts new game | New Game does nothing| No Error|
+| 50 (when answer is 40 | Hint: go lower | Hint: go higher | No Error |
+| No Input | Hard: 1-100 | Hard: 1-50 | No Error|
 
 ---
 
